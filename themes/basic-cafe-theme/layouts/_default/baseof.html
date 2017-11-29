@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
   <link href="/css/main.css" rel="stylesheet">
 
   <title>{{ block "title" . }}
@@ -21,6 +22,8 @@
         <div class="cover-container">
 
           <header class="masthead clearfix">
+            {{ block "header" . }}
+            {{ end }}
             <div class="inner">
               <h3 class="masthead-brand">Cover</h3>
               <nav class="nav nav-masthead">
@@ -32,14 +35,20 @@
           </header>
 
           <main role="main" class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
+            {{ block "main" . }}
+            <!-- The part of the page that begins to differ between templates -->
+            {{ end }}
+            <!--<h1 class="cover-heading">Cover your page.</h1>
             <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
             <p class="lead">
               <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-            </p>
+            </p>-->
           </main>
 
           <footer class="mastfoot">
+            {{ block "footer" . }}
+            <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+            {{ end }}
             <div class="inner">
               <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
@@ -50,16 +59,6 @@
       </div>
 
     </div>
-
-    {{ block "header" . }}
-    {{ end }}
-    <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
-    {{ block "footer" . }}
-    <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-    {{ end }}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
