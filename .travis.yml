@@ -10,8 +10,6 @@ install:
 - rm -rf public || exit 0
 script:
 - "/snap/bin/hugo"
-- "pwd"
-- "ls -lrt"
 deploy:
   provider: s3
   access_key_id: AKIAJWPS2S6AZREF6A3Q
