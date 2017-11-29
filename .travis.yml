@@ -3,9 +3,15 @@ addons:
   apt:
     packages:
       - python-pygments
+
+sudo: true
+dist: trusty
+
 # Clean and don't fail
 install:
+  - sudo apt-get --yes install snapd
+  - sudo snap install hugo
   - rm -rf public || exit 0
 # Build the website
 script:
-  - binaries/hugo
+  - /snap/bin/hugo
