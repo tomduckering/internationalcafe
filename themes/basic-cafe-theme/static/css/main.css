@@ -19,6 +19,19 @@ a:hover {
   border: .05rem solid #fff;
 }
 
+.btn-secondary-closest,
+.btn-secondary-closest:hover,
+.btn-secondary-closest:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #ff3;
+  border: .05rem solid #ff3;
+}
+
+.cafe-list .btn {
+  margin: 1rem;
+}
+
 
 /*
  * Base structure
@@ -50,6 +63,10 @@ body {
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+}
+
+h1 {
+  text-align: center;
 }
 
 /* Padding for spacing */
@@ -156,6 +173,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 45rem;
   }
 }
